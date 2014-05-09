@@ -21,8 +21,8 @@ public class RQTest extends ActivityInstrumentationTestCase2<SplashActivity> {
 	private int uiTimeout = 2000;
 	private int logTimeout = 500;
 
-	boolean male = true;
-	String username = "f03@junu.me";
+	boolean male = false;
+	String username = "f02@junu.me";
 	Date birthday = new Date();
 	int currentChapter = 0;
 	int myDrinkIndex = 4;
@@ -66,7 +66,7 @@ public class RQTest extends ActivityInstrumentationTestCase2<SplashActivity> {
 				solo.waitForActivity(com.eharmony.ui.registration.rq.RelationshipQuestionnaireStartActivity.class));
 		solo.waitForDialogToClose(networkTimeout);
 
-		solo.waitForLogMessage("What is currentSection?");
+		solo.waitForLogMessage("What is currentSection?", networkTimeout);
 		for (int current = this.currentChapter; current < 10; current++) {
 			String logMessage = "What is currentSection?";
 			logMessage.concat(String.valueOf(current));
