@@ -17,6 +17,18 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <uses-library android:name="android.test.runner" />
+           <activity android:label="@string/app_name" android:name="org.junit4android.JunitTestRunnerActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Enter your test or test suite's class name here or remove the
+                 following element to make <package-name>.AllTests the class to be run as test. -->
+            <meta-data android:name="testClass" android:value="org.junit4android.tests.Junit4TestSuite" />
+            <!-- Enable autorun by setting this property to 'true' -->
+            <meta-data android:name="autorun" android:value="false" />
+        </activity>
+        <activity android:label="@string/app_name" android:name="org.junit4android.TestResultDetailActivity" />
     </application>
 
 </manifest>
