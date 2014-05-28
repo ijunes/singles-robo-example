@@ -24,7 +24,7 @@
             </intent-filter>
             <!-- Enter your test or test suite's class name here or remove the
                  following element to make <package-name>.AllTests the class to be run as test. -->
-            <meta-data android:name="testClass" android:value="org.junit4android.tests.Junit4TestSuite" />
+            <meta-data android:name="testClass" android:value="com.eharmony.robo.suite.TestRQSuite" />
             <!-- Enable autorun by setting this property to 'true' -->
             <meta-data android:name="autorun" android:value="false" />
         </activity>
